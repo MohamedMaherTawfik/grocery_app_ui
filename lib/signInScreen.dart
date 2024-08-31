@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:grocery_app/homePageScreen.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
@@ -93,7 +94,10 @@ class _SignInPageState extends State<SignInPage> {
                 height: 20,
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HomePage()));
+                },
                 child: Container(
                   margin: EdgeInsets.symmetric(
                     horizontal: 10,
@@ -127,7 +131,10 @@ class _SignInPageState extends State<SignInPage> {
                 height: 20,
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HomePage()));
+                },
                 child: Container(
                   margin: EdgeInsets.symmetric(
                     horizontal: 10,
