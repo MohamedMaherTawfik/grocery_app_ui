@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:grocery_app/productDetailScreen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -241,124 +242,144 @@ class _HomePageState extends State<HomePage> {
                     mainAxisSpacing: 2,
                   ),
                   children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.grey, width: 2),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            child: Image.asset(
-                              'images/bananas.jpg',
-                              fit: BoxFit.cover,
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ProductDetail()));
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey, width: 2),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: Column(
+                          children: [
+                            Container(
+                              child: Image.asset(
+                                'images/bananas.jpg',
+                                fit: BoxFit.cover,
+                              ),
                             ),
-                          ),
-                          Container(
-                            child: Text(
-                              'Organic Bananas',
-                              style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.bold),
+                            Container(
+                              child: Text(
+                                'Organic Bananas',
+                                style: TextStyle(
+                                    fontSize: 18, fontWeight: FontWeight.bold),
+                              ),
                             ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(right: 40),
-                            child: Text(
-                              '7pcs, priceg',
-                              style: TextStyle(
-                                  fontSize: 18, color: Colors.grey.shade600),
+                            Container(
+                              margin: EdgeInsets.only(right: 40),
+                              child: Text(
+                                '7pcs, priceg',
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.grey.shade600),
+                              ),
                             ),
-                          ),
-                          Container(
-                            margin:
-                                EdgeInsets.only(right: 10, left: 25, top: 15),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  '4.99\$',
-                                  style: TextStyle(
-                                      fontSize: 22,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Container(
-                                  height: 42,
-                                  width: 45,
-                                  decoration: BoxDecoration(
-                                      color: Colors.green,
-                                      borderRadius: BorderRadius.circular(15)),
-                                  child: Center(
-                                    child: Icon(
-                                      Icons.add,
-                                      size: 22,
-                                      color: Colors.white,
+                            Container(
+                              margin:
+                                  EdgeInsets.only(right: 10, left: 25, top: 15),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    '4.99\$',
+                                    style: TextStyle(
+                                        fontSize: 22,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Container(
+                                    height: 42,
+                                    width: 45,
+                                    decoration: BoxDecoration(
+                                        color: Colors.green,
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
+                                    child: Center(
+                                      child: Icon(
+                                        Icons.add,
+                                        size: 22,
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.grey, width: 2),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            child: Image.asset(
-                              'images/bananas.jpg',
-                              fit: BoxFit.cover,
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ProductDetail()));
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey, width: 2),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: Column(
+                          children: [
+                            Container(
+                              child: Image.asset(
+                                'images/bananas.jpg',
+                                fit: BoxFit.cover,
+                              ),
                             ),
-                          ),
-                          Container(
-                            child: Text(
-                              'Organic Bananas',
-                              style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.bold),
+                            Container(
+                              child: Text(
+                                'Organic Bananas',
+                                style: TextStyle(
+                                    fontSize: 18, fontWeight: FontWeight.bold),
+                              ),
                             ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(right: 40),
-                            child: Text(
-                              '4pcs, priceg',
-                              style: TextStyle(
-                                  fontSize: 18, color: Colors.grey.shade600),
+                            Container(
+                              margin: EdgeInsets.only(right: 40),
+                              child: Text(
+                                '4pcs, priceg',
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.grey.shade600),
+                              ),
                             ),
-                          ),
-                          Container(
-                            margin:
-                                EdgeInsets.only(right: 10, left: 25, top: 15),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  '3.5\$',
-                                  style: TextStyle(
-                                      fontSize: 22,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Container(
-                                  height: 42,
-                                  width: 45,
-                                  decoration: BoxDecoration(
-                                      color: Colors.green,
-                                      borderRadius: BorderRadius.circular(15)),
-                                  child: Center(
-                                    child: Icon(
-                                      Icons.add,
-                                      size: 22,
-                                      color: Colors.white,
+                            Container(
+                              margin:
+                                  EdgeInsets.only(right: 10, left: 25, top: 15),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    '3.5\$',
+                                    style: TextStyle(
+                                        fontSize: 22,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Container(
+                                    height: 42,
+                                    width: 45,
+                                    decoration: BoxDecoration(
+                                        color: Colors.green,
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
+                                    child: Center(
+                                      child: Icon(
+                                        Icons.add,
+                                        size: 22,
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ],
@@ -398,127 +419,147 @@ class _HomePageState extends State<HomePage> {
                     mainAxisSpacing: 2,
                   ),
                   children: [
-                    Container(
-                      height: 60,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.grey, width: 2),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            child: Image.asset(
-                              'images/paper2.png',
-                              fit: BoxFit.cover,
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ProductDetail()));
+                      },
+                      child: Container(
+                        height: 60,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey, width: 2),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: Column(
+                          children: [
+                            Container(
+                              child: Image.asset(
+                                'images/paper2.png',
+                                fit: BoxFit.cover,
+                              ),
                             ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(top: 10, right: 25),
-                            child: Text(
-                              'Good Paper',
-                              style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.bold),
+                            Container(
+                              margin: EdgeInsets.only(top: 10, right: 25),
+                              child: Text(
+                                'Good Paper',
+                                style: TextStyle(
+                                    fontSize: 18, fontWeight: FontWeight.bold),
+                              ),
                             ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(right: 20),
-                            child: Text(
-                              '11pcs, priceg',
-                              style: TextStyle(
-                                  fontSize: 18, color: Colors.grey.shade600),
+                            Container(
+                              margin: EdgeInsets.only(right: 20),
+                              child: Text(
+                                '11pcs, priceg',
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.grey.shade600),
+                              ),
                             ),
-                          ),
-                          Container(
-                            margin:
-                                EdgeInsets.only(right: 10, left: 25, top: 13),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  '6.50\$',
-                                  style: TextStyle(
-                                      fontSize: 22,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Container(
-                                  height: 42,
-                                  width: 45,
-                                  decoration: BoxDecoration(
-                                      color: Colors.green,
-                                      borderRadius: BorderRadius.circular(15)),
-                                  child: Center(
-                                    child: Icon(
-                                      Icons.add,
-                                      size: 22,
-                                      color: Colors.white,
+                            Container(
+                              margin:
+                                  EdgeInsets.only(right: 10, left: 25, top: 13),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    '6.50\$',
+                                    style: TextStyle(
+                                        fontSize: 22,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Container(
+                                    height: 42,
+                                    width: 45,
+                                    decoration: BoxDecoration(
+                                        color: Colors.green,
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
+                                    child: Center(
+                                      child: Icon(
+                                        Icons.add,
+                                        size: 22,
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.grey, width: 2),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            child: Image.asset(
-                              'images/pangiful.png',
-                              fit: BoxFit.cover,
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ProductDetail()));
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey, width: 2),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: Column(
+                          children: [
+                            Container(
+                              child: Image.asset(
+                                'images/pangiful.png',
+                                fit: BoxFit.cover,
+                              ),
                             ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(right: 35),
-                            child: Text(
-                              'best pangiful',
-                              style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.bold),
+                            Container(
+                              margin: EdgeInsets.only(right: 35),
+                              child: Text(
+                                'best pangiful',
+                                style: TextStyle(
+                                    fontSize: 18, fontWeight: FontWeight.bold),
+                              ),
                             ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(right: 40),
-                            child: Text(
-                              '10pcs, priceg',
-                              style: TextStyle(
-                                  fontSize: 18, color: Colors.grey.shade600),
+                            Container(
+                              margin: EdgeInsets.only(right: 40),
+                              child: Text(
+                                '10pcs, priceg',
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.grey.shade600),
+                              ),
                             ),
-                          ),
-                          Container(
-                            margin:
-                                EdgeInsets.only(right: 10, left: 25, top: 15),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  '2.99\$',
-                                  style: TextStyle(
-                                      fontSize: 22,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Container(
-                                  height: 42,
-                                  width: 45,
-                                  decoration: BoxDecoration(
-                                      color: Colors.green,
-                                      borderRadius: BorderRadius.circular(15)),
-                                  child: Center(
-                                    child: Icon(
-                                      Icons.add,
-                                      size: 22,
-                                      color: Colors.white,
+                            Container(
+                              margin:
+                                  EdgeInsets.only(right: 10, left: 25, top: 15),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    '2.99\$',
+                                    style: TextStyle(
+                                        fontSize: 22,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Container(
+                                    height: 42,
+                                    width: 45,
+                                    decoration: BoxDecoration(
+                                        color: Colors.green,
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
+                                    child: Center(
+                                      child: Icon(
+                                        Icons.add,
+                                        size: 22,
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ],
@@ -626,127 +667,147 @@ class _HomePageState extends State<HomePage> {
                     mainAxisSpacing: 2,
                   ),
                   children: [
-                    Container(
-                      height: 60,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.grey, width: 2),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            child: Image.asset(
-                              'images/meat.png',
-                              fit: BoxFit.cover,
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ProductDetail()));
+                      },
+                      child: Container(
+                        height: 60,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey, width: 2),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: Column(
+                          children: [
+                            Container(
+                              child: Image.asset(
+                                'images/meat.png',
+                                fit: BoxFit.cover,
+                              ),
                             ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(top: 33, right: 25),
-                            child: Text(
-                              'Beef Bone',
-                              style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.bold),
+                            Container(
+                              margin: EdgeInsets.only(top: 33, right: 25),
+                              child: Text(
+                                'Beef Bone',
+                                style: TextStyle(
+                                    fontSize: 18, fontWeight: FontWeight.bold),
+                              ),
                             ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(right: 20),
-                            child: Text(
-                              '1Kg, priceg',
-                              style: TextStyle(
-                                  fontSize: 18, color: Colors.grey.shade600),
+                            Container(
+                              margin: EdgeInsets.only(right: 20),
+                              child: Text(
+                                '1Kg, priceg',
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.grey.shade600),
+                              ),
                             ),
-                          ),
-                          Container(
-                            margin:
-                                EdgeInsets.only(right: 10, left: 25, top: 13),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  '8.99\$',
-                                  style: TextStyle(
-                                      fontSize: 22,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Container(
-                                  height: 42,
-                                  width: 45,
-                                  decoration: BoxDecoration(
-                                      color: Colors.green,
-                                      borderRadius: BorderRadius.circular(15)),
-                                  child: Center(
-                                    child: Icon(
-                                      Icons.add,
-                                      size: 22,
-                                      color: Colors.white,
+                            Container(
+                              margin:
+                                  EdgeInsets.only(right: 10, left: 25, top: 13),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    '8.99\$',
+                                    style: TextStyle(
+                                        fontSize: 22,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Container(
+                                    height: 42,
+                                    width: 45,
+                                    decoration: BoxDecoration(
+                                        color: Colors.green,
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
+                                    child: Center(
+                                      child: Icon(
+                                        Icons.add,
+                                        size: 22,
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.grey, width: 2),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            child: Image.asset(
-                              'images/chicken.png',
-                              fit: BoxFit.cover,
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ProductDetail()));
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey, width: 2),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: Column(
+                          children: [
+                            Container(
+                              child: Image.asset(
+                                'images/chicken.png',
+                                fit: BoxFit.cover,
+                              ),
                             ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(right: 35),
-                            child: Text(
-                              'Broiler Chicken',
-                              style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.bold),
+                            Container(
+                              margin: EdgeInsets.only(right: 35),
+                              child: Text(
+                                'Broiler Chicken',
+                                style: TextStyle(
+                                    fontSize: 18, fontWeight: FontWeight.bold),
+                              ),
                             ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(right: 40),
-                            child: Text(
-                              '1Kg, priceg',
-                              style: TextStyle(
-                                  fontSize: 18, color: Colors.grey.shade600),
+                            Container(
+                              margin: EdgeInsets.only(right: 40),
+                              child: Text(
+                                '1Kg, priceg',
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.grey.shade600),
+                              ),
                             ),
-                          ),
-                          Container(
-                            margin:
-                                EdgeInsets.only(right: 10, left: 25, top: 15),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  '6.99\$',
-                                  style: TextStyle(
-                                      fontSize: 22,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Container(
-                                  height: 42,
-                                  width: 45,
-                                  decoration: BoxDecoration(
-                                      color: Colors.green,
-                                      borderRadius: BorderRadius.circular(15)),
-                                  child: Center(
-                                    child: Icon(
-                                      Icons.add,
-                                      size: 22,
-                                      color: Colors.white,
+                            Container(
+                              margin:
+                                  EdgeInsets.only(right: 10, left: 25, top: 15),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    '6.99\$',
+                                    style: TextStyle(
+                                        fontSize: 22,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Container(
+                                    height: 42,
+                                    width: 45,
+                                    decoration: BoxDecoration(
+                                        color: Colors.green,
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
+                                    child: Center(
+                                      child: Icon(
+                                        Icons.add,
+                                        size: 22,
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ],
