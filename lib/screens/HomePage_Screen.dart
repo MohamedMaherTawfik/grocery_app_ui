@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:grocery_app/productDetailScreen.dart';
+import 'package:grocery_app/screens/ProductDetail_Screen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,39 +15,6 @@ class _HomePageState extends State<HomePage> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        bottomNavigationBar: BottomNavigationBar(
-            backgroundColor: Colors.white,
-            selectedItemColor: Colors.black,
-            unselectedItemColor: Colors.black,
-            showUnselectedLabels: true,
-            iconSize: 32,
-            items: [
-              BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.home_work_outlined,
-                  ),
-                  label: 'Shop'),
-              BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.explore_outlined,
-                  ),
-                  label: 'Explore'),
-              BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.shopping_cart_outlined,
-                  ),
-                  label: 'Cart'),
-              BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.favorite_outline,
-                  ),
-                  label: 'Favourites'),
-              BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.person,
-                  ),
-                  label: 'Account'),
-            ]),
         body: Container(
           color: Colors.white,
           child: ListView(

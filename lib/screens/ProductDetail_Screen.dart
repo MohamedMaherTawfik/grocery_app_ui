@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:grocery_app/widgets/Bottom_Navigator/Bottom_navigator.dart';
 
 class ProductDetail extends StatefulWidget {
   const ProductDetail({super.key});
@@ -9,6 +10,7 @@ class ProductDetail extends StatefulWidget {
 }
 
 class _ProductDetailState extends State<ProductDetail> {
+  int number = 1;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -147,7 +149,9 @@ class _ProductDetailState extends State<ProductDetail> {
                   children: [
                     Row(children: [
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          number--;
+                        },
                         icon: Icon(
                           Icons.remove,
                           size: 30,
@@ -161,14 +165,16 @@ class _ProductDetailState extends State<ProductDetail> {
                             border: Border.all(color: Colors.grey)),
                         child: Center(
                           child: Text(
-                            '1',
+                            '${number}',
                             style: TextStyle(
                                 fontSize: 25, fontWeight: FontWeight.bold),
                           ),
                         ),
                       ),
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          number++;
+                        },
                         icon: Icon(
                           Icons.add,
                           size: 30,
@@ -225,7 +231,7 @@ class _ProductDetailState extends State<ProductDetail> {
                   margin: EdgeInsets.symmetric(horizontal: 20),
                   child: Divider()),
               SizedBox(
-                height: 10,
+                height: 0,
               ),
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 20),
@@ -266,7 +272,7 @@ class _ProductDetailState extends State<ProductDetail> {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: 0,
               ),
               Container(
                   margin: EdgeInsets.symmetric(horizontal: 20),
@@ -317,20 +323,28 @@ class _ProductDetailState extends State<ProductDetail> {
                   ],
                 ),
               ),
-              Container(
-                  margin: EdgeInsets.symmetric(horizontal: 30),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      color: Colors.green),
-                  height: 63,
-                  width: 100,
-                  child: MaterialButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Add To Basket',
-                      style: TextStyle(fontSize: 20, color: Colors.white),
-                    ),
-                  )),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => BottomNavigator()));
+                },
+                child: Container(
+                    margin: EdgeInsets.symmetric(horizontal: 30),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: Colors.green),
+                    height: 63,
+                    width: 100,
+                    child: MaterialButton(
+                      onPressed: () {},
+                      child: Text(
+                        'Add To Basket',
+                        style: TextStyle(fontSize: 20, color: Colors.white),
+                      ),
+                    )),
+              ),
             ],
           ),
         ),

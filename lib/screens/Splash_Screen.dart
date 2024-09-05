@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
-import 'package:grocery_app/getStartedScreen.dart';
+import 'package:grocery_app/screens/GetStarted_Screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
