@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:grocery_app/screens/Mycart_Screen.dart';
 import 'package:grocery_app/widgets/Bottom_Navigator/Bottom_navigator.dart';
 
 class ProductDetail extends StatefulWidget {
@@ -11,6 +12,59 @@ class ProductDetail extends StatefulWidget {
 
 class _ProductDetailState extends State<ProductDetail> {
   int number = 1;
+
+  Widget AddRemoveSection() {
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 15),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Row(children: [
+            IconButton(
+              onPressed: () {
+                number--;
+              },
+              icon: Icon(
+                Icons.remove,
+                size: 30,
+              ),
+            ),
+            Container(
+              height: 50,
+              width: 50,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: Colors.grey)),
+              child: Center(
+                child: Text(
+                  '${number}',
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+            IconButton(
+              onPressed: () {
+                number++;
+              },
+              icon: Icon(
+                Icons.add,
+                size: 30,
+                color: Colors.green,
+              ),
+            ),
+          ]),
+          Container(
+            margin: EdgeInsets.only(right: 8),
+            child: Text(
+              '4.99\$',
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -142,56 +196,9 @@ class _ProductDetailState extends State<ProductDetail> {
               SizedBox(
                 height: 25,
               ),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(children: [
-                      IconButton(
-                        onPressed: () {
-                          number--;
-                        },
-                        icon: Icon(
-                          Icons.remove,
-                          size: 30,
-                        ),
-                      ),
-                      Container(
-                        height: 50,
-                        width: 50,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            border: Border.all(color: Colors.grey)),
-                        child: Center(
-                          child: Text(
-                            '${number}',
-                            style: TextStyle(
-                                fontSize: 25, fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ),
-                      IconButton(
-                        onPressed: () {
-                          number++;
-                        },
-                        icon: Icon(
-                          Icons.add,
-                          size: 30,
-                          color: Colors.green,
-                        ),
-                      ),
-                    ]),
-                    Text(
-                      "4.99\$",
-                      style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
-              ),
+              AddRemoveSection(),
               SizedBox(
-                height: 25,
+                height: 0,
               ),
               Container(
                   margin: EdgeInsets.symmetric(horizontal: 20),

@@ -594,12 +594,12 @@ class _HomePageState extends State<HomePage> {
                           color: Colors.grey.shade200,
                           borderRadius: BorderRadius.circular(15)),
                       height: 50,
-                      width: 240,
+                      width: 200,
                       child: Row(
                         children: [
                           Container(
                             height: 85,
-                            margin: EdgeInsets.only(left: 10),
+                            margin: EdgeInsets.only(left: 20),
                             child: Image.asset('images/rice.png',
                                 fit: BoxFit.cover),
                           ),
