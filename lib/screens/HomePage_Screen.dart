@@ -322,7 +322,7 @@ class _HomePageState extends State<HomePage> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    '3.5\$',
+                                    '3.50\$',
                                     style: TextStyle(
                                         fontSize: 22,
                                         fontWeight: FontWeight.bold),
